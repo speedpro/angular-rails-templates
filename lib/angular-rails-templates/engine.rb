@@ -49,11 +49,11 @@ module AngularRailsTemplates
             end
           end
 
-          app.assets.register_engine ".#{ext}", mimeless_engine
+          app.config.assets.register_engine ".#{ext}", mimeless_engine
         end
 
         # This engine wraps the HTML into JS
-        app.assets.register_engine '.html', AngularRailsTemplates::Template
+        app.config.assets.register_engine '.html', AngularRailsTemplates::Template
       end
 
       # Sprockets Cache Busting
